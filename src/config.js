@@ -74,8 +74,8 @@ export const weddingConfig = {
     { time: '2:00 pm', label: 'Ceremonia Civil y Recepcion' },
     { time: '2:30 pm', label: 'Brindis' },
     { time: '3:00 pm', label: 'Vals' },
-    { time: '4:00 pm', label: 'Cena o Recepcion' },
-    { time: '5:00 pm', label: 'Apertura de pista de baile' },
+    { time: '6:00 pm', label: 'Cena' },
+    { time: '7:00 pm', label: 'Apertura de pista de baile' },
   ],
   timelineNote: 'Un instante pensado para disfrutar, compartir y celebrar juntos.',
   gifts: {

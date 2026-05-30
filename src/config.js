@@ -72,8 +72,8 @@ export const weddingConfig = {
   timeline: [
     { time: '10:00 am', label: 'Ceremonia Religiosa' },
     { time: '2:00 pm', label: 'Ceremonia Civil y Recepcion' },
-    { time: '2:30 pm', label: 'Brindis' },
-    { time: '3:00 pm', label: 'Vals' },
+    { time: '3:00 pm', label: 'Brindis' },
+    { time: '4:00 pm', label: 'Vals' },
     { time: '6:00 pm', label: 'Cena' },
     { time: '7:00 pm', label: 'Apertura de pista de baile' },
   ],

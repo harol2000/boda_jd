@@ -72,8 +72,7 @@ export const weddingConfig = {
     image: asset('assets/img/dress_code.png'),
   },
   timeline: [
-    { time: '10:00 am', label: 'Ceremonia Religiosa' },
-    { time: '2:00 pm', label: 'Ceremonia Civil y Recepcion' },
+    { time: '10:00 am', label: 'Ceremonia Religiosa y Civil' },
     { time: '3:00 pm', label: 'Brindis' },
     { time: '4:00 pm', label: 'Vals' },
     { time: '6:00 pm', label: 'Cena' },

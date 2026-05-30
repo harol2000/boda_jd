@@ -1727,6 +1727,115 @@ body.invitation-opened .music-floating-button {
   text-align: center;
 }
 
+.yape-gift {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.yape-gift__frame {
+  width: min(100%, 420px);
+  padding: 0.72rem;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 249, 242, 0.92));
+  border: 1px solid rgba(201, 162, 74, 0.22);
+  box-shadow: 0 22px 46px rgba(110, 31, 47, 0.12);
+}
+
+.yape-gift__frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  object-fit: contain;
+}
+
+.yape-copy-card {
+  width: min(100%, 420px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: 22px;
+  background: rgba(255, 252, 248, 0.92);
+  border: 1px solid rgba(201, 162, 74, 0.22);
+  box-shadow: 0 16px 32px rgba(110, 31, 47, 0.08);
+  text-align: left;
+}
+
+.yape-copy-card__label {
+  display: block;
+  margin-bottom: 0.12rem;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.yape-copy-card__number {
+  display: block;
+  color: var(--wine);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.65rem, 7vw, 2.1rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.yape-copy-card__button {
+  min-height: 2.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.62rem 0.9rem;
+  border: 1px solid rgba(110, 31, 47, 0.16);
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, rgba(110, 31, 47, 0.95), rgba(138, 45, 66, 0.95));
+  color: #fff9f2;
+  box-shadow: 0 12px 24px rgba(110, 31, 47, 0.18);
+  cursor: pointer;
+  transition:
+    transform 0.24s ease,
+    box-shadow 0.24s ease,
+    background 0.24s ease;
+}
+
+.yape-copy-card__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(110, 31, 47, 0.24);
+}
+
+.yape-copy-card__button.is-copied {
+  background: linear-gradient(135deg, var(--gold), #d9b968);
+  color: var(--wine-deep);
+}
+
+.yape-copy-card__icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+}
+
+.yape-copy-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 520px) {
+  .yape-copy-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
 .gift-card p:last-child,
 .rsvp-card p {
   margin-bottom: 0;

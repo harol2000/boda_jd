@@ -500,22 +500,27 @@ app.innerHTML = `
       className: 'gift-card-shell',
       eyebrow: 'Regalos',
       title: config.gifts.intro,
-      subtitle: 'Si deseas tener un detalle adicional, aqui te dejamos dos opciones.',
+      subtitle: 'Si deseas tener un detalle adicional, puedes hacerlo con mucho carino por este medio.',
       corners: 'gold',
       divider: config.lotties.giftAccent,
       body: `
-        <div class="gift-grid">
-          <article class="mini-card gift-card reveal">
-            <div class="gift-card__icon" data-lottie="${config.lotties.giftAccent}" data-loop="true"></div>
-            <span class="gift-card__label">Yape</span>
-            <p class="gift-highlight">${config.gifts.yapeNumber}</p>
-            <p>Si deseas tener un detalle con nosotros, puedes hacerlo por este medio.</p>
-          </article>
-          <article class="mini-card gift-card reveal" style="--delay:0.12s">
-            <span class="gift-card__label">${config.gifts.envelopeTitle}</span>
-            <h3>Con mucho carino</h3>
-            <p>${config.gifts.envelopeText}</p>
-          </article>
+        <div class="yape-gift reveal">
+          <div class="yape-gift__frame">
+            <img src="${config.gifts.yapeImage}" alt="Yape de Janeth" />
+          </div>
+          <div class="yape-copy-card" aria-label="Numero de Yape">
+            <span class="yape-copy-card__label">Numero de Yape</span>
+            <strong class="yape-copy-card__number">${config.gifts.yapeNumber}</strong>
+            <button class="yape-copy-card__button" type="button" data-copy="${config.gifts.yapeNumber}" aria-label="Copiar numero de Yape">
+              <span class="yape-copy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="8" width="11" height="11" rx="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1" />
+                </svg>
+              </span>
+              <span class="yape-copy-card__text">Copiar</span>
+            </button>
+          </div>
         </div>
       `,
     })}
@@ -654,6 +659,36 @@ const setupLotties = () => {
   });
 };
 
+const setupCopyButtons = () => {
+  document.querySelectorAll('[data-copy]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const value = button.dataset.copy || '';
+      const label = button.querySelector('.yape-copy-card__text');
+      const originalText = label?.textContent || 'Copiar';
+
+      try {
+        await navigator.clipboard.writeText(value);
+        if (label) label.textContent = 'Copiado';
+        button.classList.add('is-copied');
+      } catch (error) {
+        const fallbackInput = document.createElement('input');
+        fallbackInput.value = value;
+        document.body.append(fallbackInput);
+        fallbackInput.select();
+        document.execCommand('copy');
+        fallbackInput.remove();
+        if (label) label.textContent = 'Copiado';
+        button.classList.add('is-copied');
+      }
+
+      window.setTimeout(() => {
+        if (label) label.textContent = originalText;
+        button.classList.remove('is-copied');
+      }, 1800);
+    });
+  });
+};
+
 const formatCountdownValue = (value) => String(Math.max(0, value)).padStart(2, '0');
 
 const countdownElements = {
@@ -748,5 +783,6 @@ activateFallbacks();
 createPetals();
 observeReveals();
 setupLotties();
+setupCopyButtons();
 updateCountdown();
 window.setInterval(updateCountdown, 1000);

@@ -80,7 +80,8 @@ export const weddingConfig = {
   timelineNote: 'Un instante pensado para disfrutar, compartir y celebrar juntos.',
   gifts: {
     intro: 'Tu presencia es nuestro mejor regalo',
-    yapeNumber: '999 999 999',
+    yapeNumber: '955724551',
+    yapeImage: asset('assets/img/janeth_yape.png'),
     envelopeTitle: 'Lluvia de sobres',
     envelopeText:
       'Si deseas acompanarnos con un detalle adicional, recibiremos tu sobre con mucho carino.',

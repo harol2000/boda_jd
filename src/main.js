@@ -123,6 +123,7 @@ const ceremonyCards = config.ceremonies
           </div>
           <div class="ceremony-card__details">
             <strong>${ceremony.place}</strong>
+            <p class="ceremony-card__date">${ceremony.date}</p>
             <p class="ceremony-card__time">${ceremony.time.toUpperCase()}</p>
             <p>${ceremony.address}</p>
             ${ceremony.city ? `<p>${ceremony.city}</p>` : ''}
@@ -447,8 +448,8 @@ app.innerHTML = `
     ${createSectionCard({
       className: 'ceremonies-card',
       eyebrow: 'Ceremonias',
-      title: 'Dos momentos, una misma celebracion',
-      subtitle: 'Te esperamos para vivir cada instante con nosotros.',
+      title: 'Un día para celebrar juntos',
+      subtitle: 'Acompáñanos en la ceremonia y luego celebremos este momento con alegría.',
       corners: 'wine',
       divider: config.lotties.floralDivider,
       body: `
@@ -581,6 +582,15 @@ app.innerHTML = `
         <p class="closing-card__footer reveal">Te esperamos</p>
       </div>
     </section>
+
+    <footer class="signature-footer reveal" aria-label="Credito de diseno">
+      <span class="signature-footer__line"></span>
+      <p>
+        <small>Design by</small>
+        <strong>Kat</strong>
+      </p>
+      <span class="signature-footer__line"></span>
+    </footer>
   </main>
 
   <button class="music-toggle music-floating-button" id="music-toggle" type="button" aria-label="Reproducir musica">

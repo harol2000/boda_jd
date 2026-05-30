@@ -43,9 +43,10 @@ export const weddingConfig = {
   },
   ceremonies: [
     {
-      title: 'Ceremonia Religiosa',
+      title: 'Ceremonia Religiosa y Civil',
       time: '10:00 am',
       place: 'Iglesia San Francisco',
+      date: 'Sábado 8 de Agosto',
       address: 'Parque 4 de octubre',
       city: '',
       mapsUrl: 'https://maps.app.goo.gl/2CAn12AoUQqaVQwh9',
@@ -53,9 +54,10 @@ export const weddingConfig = {
       lottie: asset('assets/lottie/forest-church.json'),
     },
     {
-      title: 'Ceremonia Civil y Recepcion',
+      title: 'Luego sírvanse pasar a',
       time: '2:00 pm',
-      place: 'Cesar Vallejo',
+      place: 'Loza Deportiva Cesar Vallejo',
+      date: 'Sábado 8 de Agosto',
       address: 'Ex Cuchipampa',
       city: '',
       mapsUrl: 'https://maps.app.goo.gl/2CAn12AoUQqaVQwh9',

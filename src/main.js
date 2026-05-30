@@ -115,14 +115,27 @@ const ceremonyCards = config.ceremonies
         </div>
         <div class="ceremony-card__body">
           <div class="ceremony-card__icon" data-lottie="${ceremony.lottie}" data-loop="true"></div>
-          <p class="ceremony-card__kicker">${ceremony.time}</p>
-          <h3>${ceremony.title}</h3>
-          <div class="ceremony-card__details">
-            <p>${ceremony.place}</p>
-            <p>${ceremony.address}</p>
-            <p>${ceremony.city}</p>
+          <h3 class="ceremony-card__title">${ceremony.title}</h3>
+          <div class="ceremony-card__divider" aria-hidden="true">
+            <span></span>
+            <i>&hearts;</i>
+            <span></span>
           </div>
-          <a class="secondary-button" href="${ceremony.mapsUrl}" target="_blank" rel="noreferrer">Como llegar</a>
+          <div class="ceremony-card__details">
+            <strong>${ceremony.place}</strong>
+            <p class="ceremony-card__time">${ceremony.time.toUpperCase()}</p>
+            <p>${ceremony.address}</p>
+            ${ceremony.city ? `<p>${ceremony.city}</p>` : ''}
+          </div>
+          <a class="secondary-button ceremony-card__map-button" href="${ceremony.mapsUrl}" target="_blank" rel="noreferrer">
+            <span class="ceremony-card__map-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12z" />
+                <circle cx="12" cy="9" r="2.4" />
+              </svg>
+            </span>
+            Como llegar
+          </a>
         </div>
       </article>
     `,

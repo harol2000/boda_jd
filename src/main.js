@@ -563,8 +563,8 @@ app.innerHTML = `
       <div class="section-card__inner closing-card__inner">
         <div class="closing-card__accent reveal" data-lottie="${config.lotties.footerAccent}" data-loop="true"></div>
         <p class="closing-monogram reveal">${config.names.monogram}</p>
-        <h2 class="card-title reveal">Gracias por acompanarnos en este capitulo tan especial</h2>
-        <p class="card-subtitle reveal">Te esperamos para compartir una celebracion llena de amor, familia y alegria.</p>
+        <h2 class="card-title reveal">Gracias por acompañarnos en este capítulo tan especial</h2>
+        <p class="card-subtitle reveal">Te esperamos para compartir una celebración llena de amor, familia y alegría.</p>
         <p class="closing-card__footer reveal">Te esperamos</p>
       </div>
     </section>

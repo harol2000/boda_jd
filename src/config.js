@@ -50,7 +50,7 @@ export const weddingConfig = {
       city: 'San Francisco',
       mapsUrl: 'https://maps.app.goo.gl/2CAn12AoUQqaVQwh9',
       image: asset('assets/img/foto_iglesia_dentro.png'),
-      lottie: asset('assets/lottie/cross.json'),
+      lottie: asset('assets/lottie/forest-church.json'),
     },
     {
       title: 'Ceremonia Civil y Recepcion',
